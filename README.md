@@ -1,6 +1,6 @@
 # grunt-minjson
 
-> A Grunt plugin to minify JSON files.
+> A Grunt plugin to minify and concat JSON files.
 
 ## Getting Started
 _If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
