@@ -10,6 +10,8 @@
 
 module.exports = function(grunt) {
 
+  var JSON5 = require('json5');
+
   grunt.registerMultiTask('minjson', 'Minify json files.', function() {
     var helpers = require('grunt-lib-contrib').init(grunt);
 
@@ -24,7 +26,7 @@ module.exports = function(grunt) {
         var data = grunt.file.read(filepath);
         try {
           // minify json
-          return JSON.stringify(JSON.parse(data));
+          return JSON5.stringify(JSON5.parse(data));
         } catch (err) {
           errors.push(err.message + ' in ' + filepath);
           return '';

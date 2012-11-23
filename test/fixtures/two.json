@@ -1,3 +1,6 @@
 {
-  "two": [1, 2]
+  "two": [1, 2],
+  // multilines
+  "multiline": "Line one\
+line two"
 }
