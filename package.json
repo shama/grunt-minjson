@@ -1,7 +1,7 @@
 {
   "name": "grunt-minjson",
   "description": "A Grunt plugin to minify and concat JSON files.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/shama/grunt-minjson",
   "author": {
     "name": "Kyle Robinson Young",
@@ -32,8 +32,8 @@
     "json5": "~0.1.0"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "0.1.0",
-    "grunt": "~0.4.0a"
+    "grunt-contrib-jshint": "0.1.1",
+    "grunt": "~0.4.0"
   },
   "keywords": [
     "gruntplugin"
