@@ -29,7 +29,8 @@
     "test": "grunt"
   },
   "dependencies": {
-    "json5": "~0.1.0"
+    "json5": "~0.1.0",
+    "maxmin": "^1.1.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "0.1.1",
