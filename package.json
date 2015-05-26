@@ -29,12 +29,12 @@
     "test": "grunt"
   },
   "dependencies": {
-    "json5": "~0.1.0",
+    "json5": "^0.4.0",
     "maxmin": "^1.1.0"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "0.1.1",
-    "grunt": "~0.4.0"
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "^0.11.2"
   },
   "keywords": [
     "gruntplugin"
