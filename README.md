@@ -48,5 +48,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+* 0.2.0 Updating json5 to 0.4.0. Print size comparison (@brunomperes).
 * 0.1.1 Support for Grunt v0.4.
 * 0.1.0 Initial release.
