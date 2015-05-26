@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 
   var JSON5 = require('json5');
   var path = require('path');
+  var maxmin = require('maxmin');
 
   grunt.registerMultiTask('minjson', 'Minify and concat json files.', function() {
 
@@ -24,12 +25,17 @@ module.exports = function(grunt) {
       var srcFiles = grunt.file.expand(file.src);
       var src = [];
       var errors = [];
+      var uncompressedString = '';
+      var compressedString = '';
 
       srcFiles.forEach(function(filepath) {
         var data = grunt.file.read(filepath);
+        uncompressedString += data;
         try {
           // minify json
-          src.push(JSON5.stringify(JSON5.parse(data)));
+          var minified = JSON5.stringify(JSON5.parse(data));
+          compressedString += minified;
+          src.push(minified);
         } catch (err) {
           errors.push(err.message + ' in ' + filepath);
         }
@@ -40,7 +46,7 @@ module.exports = function(grunt) {
         if (src.length > 1) { src = '[' + src.join(',') + ']'; }
         else { src = src[0]; }
         grunt.file.write(dest, src);
-        grunt.log.writeln('File "' + dest + '" created.');
+        grunt.log.writeln('File "' + dest + '" created: ' + maxmin(uncompressedString, compressedString));
       } else {
         // display errors
         errors.forEach(function(msg) { grunt.log.error(msg); });
