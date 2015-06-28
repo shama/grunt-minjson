@@ -14,7 +14,6 @@ module.exports = function(grunt) {
     grunt.fatal('grunt-minjson is only compatible with Grunt v0.4.0+');
   }
 
-  var JSON5 = require('json5');
   var path = require('path');
   var maxmin = require('maxmin');
 
@@ -33,7 +32,7 @@ module.exports = function(grunt) {
         uncompressedString += data;
         try {
           // minify json
-          var minified = JSON5.stringify(JSON5.parse(data));
+          var minified = JSON.stringify(JSON.parse(data));
           compressedString += minified;
           src.push(minified);
         } catch (err) {

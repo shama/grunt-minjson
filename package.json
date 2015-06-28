@@ -29,7 +29,6 @@
     "test": "grunt"
   },
   "dependencies": {
-    "json5": "^0.4.0",
     "maxmin": "^1.1.0"
   },
   "devDependencies": {
