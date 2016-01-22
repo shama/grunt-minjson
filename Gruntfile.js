@@ -2,7 +2,7 @@
  * grunt-minjson
  * https://github.com/shama/grunt-minjson
  *
- * Copyright (c) 2015 Kyle Robinson Young
+ * Copyright (c) 2016 Kyle Robinson Young
  * Licensed under the MIT license.
  */
 
