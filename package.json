@@ -23,11 +23,11 @@
     "test": "grunt"
   },
   "dependencies": {
-    "maxmin": "^1.1.0"
+    "maxmin": "^2.1.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-jshint": "^0.11.2"
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.12.0"
   },
   "keywords": [
     "gruntplugin"
