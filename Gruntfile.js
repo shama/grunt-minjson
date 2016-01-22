@@ -15,6 +15,11 @@ module.exports = function(grunt) {
           'test/expected/one.min.json': ['test/fixtures/one.json'],
           'test/expected/all.min.json': ['test/fixtures/*.json']
         }
+      },
+      fail: {
+        files: {
+          'test/expected/fail.min.json': ['test/fixtures/failure/fail.json']
+        }
       }
     },
     jshint: {
@@ -29,5 +34,6 @@ module.exports = function(grunt) {
   });
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.registerTask('default', ['jshint', 'minjson']);
+  grunt.registerTask('default', ['jshint', 'minjson:all']);
+  grunt.registerTask('fail', ['minjson:fail']);
 };

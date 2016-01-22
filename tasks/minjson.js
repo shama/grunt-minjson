@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         grunt.log.writeln('File "' + dest + '" created: ' + maxmin(uncompressedString, compressedString));
       } else {
         // display errors
-        errors.forEach(function(msg) { grunt.log.error(msg); });
+        grunt.fail.warn("\n"+ errors.join('\n') +"\n" , 1);
       }
     });
   });
